@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="js/ajax.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> coffee <i class="fas fa-mug-hot"></i> </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#review">review</a>
+        <a href="#book">book</a>
+    </nav>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="nav-link dropdown-toggle profile-text" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Profile </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-cyan profile-div" aria-labelledby="navbarDropdownMenuLink-4">
+        <a class="dropdown-item profile-text" href="#">My Orders</a>
+        <a class="dropdown-item profile-text" href="/logout">Log out</a>
+    </div>
+    <a href="/cart" class="btn-icon"><i class="fa fa-shopping-cart"></i></a>
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>A good cup of coffee is like a warm hug for the soul .</h3>
+            <!-- <a href="#" class="btn">buy one now</a> -->
+        </div>
+
+        <div class="image">
+            <img src="image/home-img-1.png" class="main-home-image" alt="">
+        </div>
+
+    </div>
+
+    <div class="image-slider">
+        <img src="image/home-img-1.png" alt="">
+        <img src="image/home-img-2.png" alt="">
+        <img src="image/home-img-3.png" alt="">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about us <span>why choose us</span> </h1>    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/about-img.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3 class="title">what's make our coffee special!</h3>
+            <p>high-quality beans, unique processing methods, careful roasting, and specialty brewing methods that all contribute to the final flavor and aroma of the brew.</p>
+            <!-- <a href="#" class="btn">read more</a> -->
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="image/about-icon-1.png" alt="">
+                    <h3>quality coffee</h3>
+                </div>
+                <div class="icons">
+                    <img src="image/about-icon-2.png" alt="">
+                    <h3>our branches</h3>
+                </div>
+                <div class="icons">
+                    <img src="image/about-icon-3.png" alt="">
+                    <h3>free delivery</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h1 class="heading"> our menu <span>popular menu</span> </h1>
+
+    <div class="box-container">
+        <form action="/add-to-cart" method="post" id="form-1">
+            <img src="image/menu-1.png" alt="">
+            <div class="content">
+                <h3>Colombian coffee</h3>
+                <p>medium-bodied with a mild flavor and a slight sweetness.</p>
+                <span>$6.99</span>
+                <input type="number" name="quantity" id="quantity_input" value="1">
+                <input type="hidden" name="item1" value="Colombian coffee">
+                <input type="hidden" name="price1" value="6.99">
+                <button class="book-btn">Add to Cart</button>
+            </div>
+        </form>
+        
+    
+        <form action="/add-to-cart" method="post">
+            <img src="image/menu-3.png" alt="">
+            <div class="content">
+                <h3>Vietnamese coffee: </h3>
+                <p>strong and rich with a sweetened condensed milk added for sweetness.</p>
+                <span>$8.99</span>
+                <input type="number" name="quantity" id="quantity_input"value="1">
+                <input type="hidden" name="item1" value="Vietnamese coffee">
+                <input type="hidden" name="price1" value="8.99">
+                <button class="book-btn">Add to Cart</button>
+            </div>
+        </form>
+
+        <form action="/add-to-cart" method="post">
+            <img src="image/menu-3.png" alt="">
+            <div class="content">
+                <h3>Vanilla Latte: </h3>
+                <p>A classic specialty coffee that combines espresso, steamed milk, and vanilla syrup for a sweet and creamy taste.</p>
+                <span>$10.99</span>
+                <input type="number" name="quantity" id="quantity_input"value="1">
+                <input type="hidden" name="item1" value="Vanilla Latte">
+                <input type="hidden" name="price1" value="10.99">
+                <button class="book-btn">Add to Cart</button>
+            </div>
+        </form>
+
+        <form action="/add-to-cart" method="post">
+            <img src="image/menu-4.png" alt="">
+            <div class="content">
+                <h3>Hawaiian Kona coffee:</h3>
+                <p>medium-bodied with a smooth and rich flavor</p>
+                <span>$8.50</span>
+                <input type="number" name="quantity" id="quantity_input"value="1">
+                <input type="hidden" name="item1" value="Hawaiian Kona coffee">
+                <input type="hidden" name="price1" value="8.50">
+                <button class="book-btn">Add to Cart</button>
+            </div>
+        </form>
+
+        <form action="/add-to-cart" method="post">
+            <img src="image/menu-5.png" alt="">
+            <div class="content">
+                <h3>Sumatran coffee:</h3>
+                <p>full-bodied and earthy with a chocolatey finish</p>
+                <span>$4.99</span>
+                <input type="number" name="quantity" id="quantity_input"value="1">
+                <input type="hidden" name="item1" value="Sumatran Coffee">
+                <input type="hidden" name="price1" value="4.99">
+                <button class="book-btn">Add to Cart</button>
+            </div>
+        </form>
+
+        <form action="/add-to-cart" method="post">
+            <img src="image/menu-6.png" alt="">
+            <div class="content">
+                <h3>Costa Rican coffee:</h3>
+                <p>medium-bodied with a bright acidity and a honey-like sweetness</p>
+                <span>$7.99</span>
+                <input type="number" name="quantity" id="quantity_input"value="1">
+                <input type="hidden" name="item1" value="Costa rican coffee">
+                <input type="hidden" name="price1" value="7.99">
+                <button class="book-btn">Add to Cart</button>
+            </div>
+        </form>
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> reviews <span>what people says</span> </h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <img src="image/pic-1.png" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>I had the pleasure of enjoying a cup of coffee at this establishment and I must say, it was absolutely fantastic! The barista clearly knew their craft, as the coffee was brewed to perfection and had a smooth, rich flavor that was truly exceptional. I highly recommend this place to any coffee lover out there!</p>
+                <h3>William James</h3>
+                <span>satisfied client</span>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <img src="image/pic-2.png" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>I am so grateful to have stumbled upon this coffee shop! The quality of their coffee is unparalleled, with a flavor that is both bold and nuanced. The staff are also incredibly friendly and knowledgeable, making for a truly enjoyable coffee experience every time I visit. I can't recommend this place enough!</p>
+                <h3>Jiraiya</h3>
+                <span>satisfied client</span>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <img src="image/pic-3.png" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>I am blown away by the amazing coffee served at this cafe! From the first sip, I could tell that the beans were of the highest quality and the brewing process was done with great care and precision. It's clear that the staff here take great pride in their coffee, and it shows in the delicious, rich flavor of every cup. I will definitely be returning for more!</p>
+                <h3>Lucas</h3>
+                <span>satisfied client</span>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <img src="image/pic-4.png" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>I have been searching for the perfect cup of coffee for years, and I can confidently say that I have finally found it at this cafe! The flavor is absolutely sublime, with notes of chocolate and caramel that dance on my tastebuds with every sip.I will be a loyal customer for life!</p>
+                <h3>Elijah</h3>
+                <span>satisfied client</span>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- book section starts  -->
+<section class="book" id="book">
+
+    <h1 class="heading"> booking <span>reserve a table</span> </h1>
+
+    <form action="">
+
+        <input type="text" placeholder="your name" class="box">
+        <input type="email" placeholder="your email" class="box">
+        <input type="number" placeholder="your number" class="box">
+
+        <textarea name="" placeholder="your message" class="box" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="send message" class="book-btn">
+
+    </form>
+
+</section>
+
+<!-- book section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our branches</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> india </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> USA </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> france </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> africa </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Japan </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> about </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> menu </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> book </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> coffeeshop@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> Newyork </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="https://facebook.com/freewebsitecode"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            
+        </div>
+
+    </div>
+
+    
+</section>
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
